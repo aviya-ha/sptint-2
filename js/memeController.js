@@ -19,36 +19,31 @@ const gCtx = gElCanvas.getContext('2d')
 var gKeywordSearchCountMap = { 'funny': 12, 'cat': 16, 'baby': 2 }
 
 function onInit(){
-    renderMeme()
+    renderMeme(gImgs)
 }
 
-function renderMeme() {
-    drawImg(gImgs)
-    drawText('hay', 50, 50)
-}
-
-
-
-function drawImg([{ url }]) {
+function renderMeme([{ url }]) {
     const elImg = new Image()
     elImg.src = url
-    elImg.onload = () =>
-    gCtx.drawImage(elImg, 0, 0, gElCanvas.width, gElCanvas.height)
+    elImg.onload = () =>{
+        gCtx.drawImage(elImg, 0, 0, gElCanvas.width, gElCanvas.height)
+        drawText('hay', 250, 250)
+    }
 }
 
 
 function drawText(text, x, y) {
-    gCtx.beginPath()
-	gCtx.lineWidth = 2
+    
+    gCtx.lineWidth = 2
 	gCtx.strokeStyle = 'orange'
 
+	gCtx.font = '45px Arial'
 	gCtx.fillStyle = 'lightsteelblue'
 
-	gCtx.font = '45px Arial'
 	gCtx.textAlign = 'center'
 	gCtx.textBaseline = 'middle'
 
-	gCtx.fillText(text, x, y)
+    gCtx.fillText(text, x, y)
 	gCtx.strokeText(text, x, y)
 }
 

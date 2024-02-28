@@ -8,6 +8,6 @@
     width: fit-content;
 }
 
-/* canvas{
-
-} */
+canvas{
+    border: 5px solid red;
+}

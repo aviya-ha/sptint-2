@@ -8,25 +8,35 @@
     <title>Document</title>
 </head>
 
-<body>
+<body onload="onInit()">
 
-    <section class="main-container">
-        <header class="main">
-            <div class="logo">logo</div>
-            <nav class="main-nav clean-list">
+
+    <header class="main-header">
+        <div class="logo">logo</div>
+        <nav class="main-nav clean-list">
             <ul class="clean-list">
-                    <li ><a href="#">Gallery</a></li>
-                    <li><a href="#">Memes</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
-        </header>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Memes</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
 
-        <main class="main-meme-content"></main>
-        <main class="main-image-content"></main>
+    <main class="main-meme-content">
+        <div class="canvas-container">
+            <canvas style="background: pink;" height="500" width="500"></canvas>
+        </div>
+        <section class="editor"></section>
+    </main>
+    
 
-    </section>
+
+
+
+    <main class="main-image-content"></main>
+
+
 
     <script src="js/memeController.js"></script>
 
